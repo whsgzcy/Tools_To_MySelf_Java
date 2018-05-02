@@ -131,13 +131,19 @@ public class HexHelper {
 		
         String json = "{\"name\":\"BeJson\",\"url\":\"http://www.bejson.com\",\"page\":88,\"isNonProfit\":true,\"address\":{\"street\":\"科技园路.\",\"city\":\"江苏苏州\",\"country\":\"中国\"},\"links\":[{\"name\":\"Google\",\"url\":\"http://www.google.com\"},{\"name\":\"Baidu\",\"url\":\"http://www.baidu.com\"},{\"name\":\"SoSo\",\"url\":\"http://www.SoSo.com\"}]}";
 
-        String json2 = "你好12312kcnajxjaxnja";
+        String json2 = "6E6968616F";
         
-		// 1、在将字符串转为16进制之前先进行一次转化,先将其转化成为Unicode编码(相当于把中文用英文字符代替),在转化成为16进制
+        String json3 = "你好,hello,我是super_yu,我的电话号码是15656098064";
+        
+        String json4 = "E4BDA0E5A5BD2C68656C6C6F2CE68891E698AF73757065725F79752CE68891E79A84E794B5E8AF9DE58FB7E7A081E698AF3135363536303938303634";
+        
+        String json5 = "6E6968616F";
+		
+        // 1、在将字符串转为16进制之前先进行一次转化,先将其转化成为Unicode编码(相当于把中文用英文字符代替),在转化成为16进制
         // 2、相反的,在十六进制转换为字符串后的得到的是Unicode编码,此时再将Unicode编码解码即可获取原始字符串
         
         // 转换为 unicode
-		String a1 = string2Unicode(json);
+		String a1 = string2Unicode(json2);
 		System.out.println("a1 == " + a1.toString());
 		
 		// 转换为 原 string
@@ -159,10 +165,10 @@ public class HexHelper {
 		System.out.println("c1 == " + c1.toString());
 		System.out.println("c2 == " + c2.toString());
 		
-		String d1 = str2HexStr(json);
+		String d1 = str2HexStr(json5);
 		System.out.println("d1 == " + d1.toString());
 		
-		String d2 = hexStr2Str(d1);
+		String d2 = hexStr2Str(json5);
 		System.out.println("d1 == " + d2.toString());
 	}
 }
