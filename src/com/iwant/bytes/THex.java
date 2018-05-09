@@ -24,7 +24,58 @@ public class THex {
 	    System.out.println(Integer.toBinaryString(g));
 	    
 	    byte[] arr = new byte[10];
-	    arr[0] = 0x10;
+	    arr[0] = 0x3C;
+	    arr[1] = 0x3E;
+	    arr[2] = (byte) 0xe6;
 	    System.out.println(arr[0]);
+	    System.out.println(arr[1]);
+	    System.out.println(arr[2]);
 	}
+	
+	
+	/**
+     * 方法一：
+     * byte[] to hex string
+     * 
+     * @param bytes
+     * @return
+     */
+	private static final char[] HEX_CHAR = {'0', '1', '2', '3', '4', '5', 
+            '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    public static String bytesToHexFun1(byte[] bytes) {
+        // 一个byte为8位，可用两个十六进制位标识
+        char[] buf = new char[bytes.length * 2];
+        int a = 0;
+        int index = 0;
+        for(byte b : bytes) { // 使用除与取余进行转换
+            if(b < 0) {
+                a = 256 + b;
+            } else {
+                a = b;
+            }
+
+            buf[index++] = HEX_CHAR[a / 16];
+            buf[index++] = HEX_CHAR[a % 16];
+        }
+        return new String(buf);
+    }
+    
+    /**
+     * 方法二：
+     * byte[] to hex string
+     * 
+     * @param bytes
+     * @return
+     */
+    public static String bytesToHexFun2(byte[] bytes) {
+        char[] buf = new char[bytes.length * 2];
+        int index = 0;
+        for(byte b : bytes) { // 利用位运算进行转换，可以看作方法一的变种
+            buf[index++] = HEX_CHAR[b >>> 4 & 0xf];
+            buf[index++] = HEX_CHAR[b & 0xf];
+        }
+
+        return new String(buf);
+    }
+
 }
