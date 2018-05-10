@@ -20,6 +20,16 @@ public class Test {
 		System.arraycopy(x, 0, b, 4, 8);
 		System.arraycopy(y, 0, b, 12, 8);
 		System.arraycopy(p, 0, b, 20, 8);
+		
+		double xx = bytes2Double(x);
+		double yy = bytes2Double(y);
+		double pp = bytes2Double(p);
+		
+		System.out.println("xx = " + xx);
+		System.out.println("yy = " + yy);
+		System.out.println("pp = " + pp);
+		
+		// 取出 double 的 byte[]
 			
 		for(int i = 0; i < b.length; i++){
 			System.out.print(b[i] + " ");
@@ -128,5 +138,11 @@ public class Test {
         return bytes;
     }
 
-
+    public static double bytes2Double(byte[] arr) {  
+        long value = 0;  
+        for (int i = 0; i < 8; i++) {  
+            value |= ((long) (arr[i] & 0xff)) << (8 * i);  
+        }  
+        return Double.longBitsToDouble(value);  
+    }  
 }
