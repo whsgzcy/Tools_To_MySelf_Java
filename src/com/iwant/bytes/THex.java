@@ -30,6 +30,16 @@ public class THex {
 	    System.out.println(arr[0]);
 	    System.out.println(arr[1]);
 	    System.out.println(arr[2]);
+	    
+	    String code = "0234";
+	    int code1 = Integer.parseInt(code.charAt(0) + "");
+	    int code2 = Integer.parseInt(code.charAt(1) + "");
+	    int code3 = Integer.parseInt(code.charAt(2) + "");
+	    int code4 = Integer.parseInt(code.charAt(3) + "");
+	    System.out.println("code1 = " + code1);
+	    System.out.println("code2 = " + code2);
+	    System.out.println("code3 = " + code3);
+	    System.out.println("code4 = " + code4);
 	}
 	
 	
