@@ -51,6 +51,13 @@ public class Test {
     	
     	System.out.println(msg);
     	
+    	String a = "2018-06-07 15:32:21";
+    	String b = "2018-06-07 15:32:21";
+    	String c = "2018-06-07 15:32:11";
+    	
+    	System.out.println(a.equals(b));
+    	System.out.println(a.equals(c));
+    	
     }
 
 }

@@ -9,10 +9,10 @@ public class RandomUtils {
 	private static final String NUMBER_CHAR = "0123456789";
 
 	/**
-	 * »ñÈ¡¶¨³¤µÄËæ»úÊı£¬°üº¬´óĞ¡Ğ´¡¢Êı×Ö
+	 * è·å–å®šé•¿çš„éšæœºæ•°ï¼ŒåŒ…å«å¤§å°å†™ã€æ•°å­—
 	 * 
 	 * @param length
-	 *            Ëæ»úÊı³¤¶È
+	 *            éšæœºæ•°é•¿åº¦
 	 * @return
 	 */
 	public static String generateString(int length) {
@@ -25,10 +25,10 @@ public class RandomUtils {
 	}
 
 	/**
-	 * »ñÈ¡¶¨³¤µÄËæ»úÊı£¬°üº¬´óĞ¡Ğ´×ÖÄ¸
+	 * è·å–å®šé•¿çš„éšæœºæ•°ï¼ŒåŒ…å«å¤§å°å†™å­—æ¯
 	 * 
 	 * @param length
-	 *            Ëæ»úÊı³¤¶È
+	 *            éšæœºæ•°é•¿åº¦
 	 * @return
 	 */
 	public static String generateMixString(int length) {
@@ -41,10 +41,10 @@ public class RandomUtils {
 	}
 
 	/**
-	 * »ñÈ¡¶¨³¤µÄËæ»úÊı£¬Ö»°üº¬Ğ¡Ğ´×ÖÄ¸
+	 * è·å–å®šé•¿çš„éšæœºæ•°ï¼ŒåªåŒ…å«å°å†™å­—æ¯
 	 *
 	 * @param length
-	 *            Ëæ»úÊı³¤¶È
+	 *            éšæœºæ•°é•¿åº¦
 	 * @return
 	 */
 	public static String generateLowerString(int length) {
@@ -52,10 +52,10 @@ public class RandomUtils {
 	}
 
 	/**
-	 * »ñÈ¡¶¨³¤µÄËæ»úÊı£¬Ö»°üº¬´óĞ´×ÖÄ¸
+	 * è·å–å®šé•¿çš„éšæœºæ•°ï¼ŒåªåŒ…å«å¤§å†™å­—æ¯
 	 * 
 	 * @param length
-	 *            Ëæ»úÊı³¤¶È
+	 *            éšæœºæ•°é•¿åº¦
 	 * @return
 	 */
 	public static String generateUpperString(int length) {
@@ -63,10 +63,10 @@ public class RandomUtils {
 	}
 
 	/**
-	 * »ñÈ¡¶¨³¤µÄËæ»úÊı£¬Ö»°üº¬Êı×Ö
+	 * è·å–å®šé•¿çš„éšæœºæ•°ï¼ŒåªåŒ…å«æ•°å­—
 	 *
 	 * @param length
-	 *            Ëæ»úÊı³¤¶È
+	 *            éšæœºæ•°é•¿åº¦
 	 * @return
 	 */
 	public static String generateNumberString(int length) {

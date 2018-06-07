@@ -8,9 +8,9 @@ import java.util.Date;
 
 public class DateUtils {
 	
-	private static final String[] weeks = {"ĞÇÆÚÈÕ","ĞÇÆÚÒ»","ĞÇÆÚ¶ş","ĞÇÆÚÈı","ĞÇÆÚËÄ","ĞÇÆÚÎå","ĞÇÆÚÁù"};
+	private static final String[] weeks = {"æ˜ŸæœŸæ—¥","æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­"};
 	/**
-	 * ¸ù¾İÖ¸¶¨¸ñÊ½»ñÈ¡µ±Ç°Ê±¼ä
+	 * æ ¹æ®æŒ‡å®šæ ¼å¼è·å–å½“å‰æ—¶é—´
 	 * @param format
 	 * @return String
 	 */
@@ -21,7 +21,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡µ±Ç°Ê±¼ä£¬¸ñÊ½Îª£ºyyyy-MM-dd HH:mm:ss
+	 * è·å–å½“å‰æ—¶é—´ï¼Œæ ¼å¼ä¸ºï¼šyyyy-MM-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String getCurrentTime(){
@@ -29,7 +29,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨¸ñÊ½µÄµ±Ç°Ê±¼ä£ºÎª¿ÕÊ±¸ñÊ½Îªyyyy-mm-dd HH:mm:ss
+	 * è·å–æŒ‡å®šæ ¼å¼çš„å½“å‰æ—¶é—´ï¼šä¸ºç©ºæ—¶æ ¼å¼ä¸ºyyyy-mm-dd HH:mm:ss
 	 * @param format
 	 * @return Date
 	 */
@@ -46,7 +46,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡µ±Ç°Ê±¼ä£¬¸ñÊ½Îªyyyy-MM-dd HH:mm:ss
+	 * è·å–å½“å‰æ—¶é—´ï¼Œæ ¼å¼ä¸ºyyyy-MM-dd HH:mm:ss
 	 * @return Date
 	 */
 	public static Date getCurrentDate(){
@@ -54,10 +54,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚ¼ÓÈëÄê·İ£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param year Äê·İ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Îª¿ÕÊ±£¬Ä¬ÈÏÎªµ±Ç°Ê±¼ä
-	 * @param format Ä¬ÈÏ¸ñÊ½Îª£ºyyyy-MM-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸåŠ å…¥å¹´ä»½ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param year å¹´ä»½  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date ä¸ºç©ºæ—¶ï¼Œé»˜è®¤ä¸ºå½“å‰æ—¶é—´
+	 * @param format é»˜è®¤æ ¼å¼ä¸ºï¼šyyyy-MM-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addYearToDate(int year,Date date,String format){
@@ -70,10 +70,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚ¼ÓÈëÄê·İ£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param year Äê·İ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Îª¿ÕÊ±£¬Ä¬ÈÏÎªµ±Ç°Ê±¼ä
-	 * @param format Ä¬ÈÏ¸ñÊ½Îª£ºyyyy-MM-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸåŠ å…¥å¹´ä»½ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param year å¹´ä»½  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date ä¸ºç©ºæ—¶ï¼Œé»˜è®¤ä¸ºå½“å‰æ—¶é—´
+	 * @param format é»˜è®¤æ ¼å¼ä¸ºï¼šyyyy-MM-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addYearToDate(int year,String date,String format){
@@ -86,10 +86,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÔÂ·İ Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param month  Ôö¼ÓÔÂ·İ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨Ê±¼ä
-	 * @param format Ö¸¶¨¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ æœˆä»½ ä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param month  å¢åŠ æœˆä»½  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¶é—´
+	 * @param format æŒ‡å®šæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addMothToDate(int month,Date date,String format) {
@@ -102,10 +102,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÔÂ·İ Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param month  Ôö¼ÓÔÂ·İ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨Ê±¼ä
-	 * @param format Ö¸¶¨¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ æœˆä»½ ä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param month  å¢åŠ æœˆä»½  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¶é—´
+	 * @param format æŒ‡å®šæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addMothToDate(int month,String date,String format) {
@@ -118,10 +118,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÌìÊı£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param day Ôö¼ÓÌìÊı ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ å¤©æ•°ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param day å¢åŠ å¤©æ•° æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addDayToDate(int day,Date date,String format) {
@@ -134,10 +134,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÌìÊı£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param day Ôö¼ÓÌìÊı ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ å¤©æ•°ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param day å¢åŠ å¤©æ•° æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addDayToDate(int day,String date,String format) {
@@ -150,10 +150,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓĞ¡Ê±£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param hour Ôö¼ÓĞ¡Ê±  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ å°æ—¶ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param hour å¢åŠ å°æ—¶  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addHourToDate(int hour,Date date,String format) {
@@ -166,10 +166,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓĞ¡Ê±£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param hour Ôö¼ÓĞ¡Ê±  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ å°æ—¶ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param hour å¢åŠ å°æ—¶  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addHourToDate(int hour,String date,String format) {
@@ -182,10 +182,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨µÄÈÕÆÚÔö¼Ó·ÖÖÓ£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param minute Ôö¼Ó·ÖÖÓ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ 
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šçš„æ—¥æœŸå¢åŠ åˆ†é’Ÿï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param minute å¢åŠ åˆ†é’Ÿ  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ 
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addMinuteToDate(int minute,Date date,String format) {
@@ -198,10 +198,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨µÄÈÕÆÚÔö¼Ó·ÖÖÓ£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param minute Ôö¼Ó·ÖÖÓ  ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ 
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šçš„æ—¥æœŸå¢åŠ åˆ†é’Ÿï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param minute å¢åŠ åˆ†é’Ÿ  æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ 
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addMinuteToDate(int minute,String date,String format){
@@ -214,10 +214,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÃë£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param second Ôö¼ÓÃë ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ ç§’ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param second å¢åŠ ç§’ æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 */
 	public static String addSecondToDate(int second,Date date,String format){
@@ -230,10 +230,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ¸øÖ¸¶¨ÈÕÆÚÔö¼ÓÃë£¬Îª¿ÕÊ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @param second Ôö¼ÓÃë ÕıÊıÏà¼Ó¡¢¸ºÊıÏà¼õ
-	 * @param date Ö¸¶¨ÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½ Îª¿ÕÄ¬ÈÏ yyyy-mm-dd HH:mm:ss
+	 * ç»™æŒ‡å®šæ—¥æœŸå¢åŠ ç§’ï¼Œä¸ºç©ºæ—¶é»˜è®¤å½“å‰æ—¶é—´
+	 * @param second å¢åŠ ç§’ æ­£æ•°ç›¸åŠ ã€è´Ÿæ•°ç›¸å‡
+	 * @param date æŒ‡å®šæ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼ ä¸ºç©ºé»˜è®¤ yyyy-mm-dd HH:mm:ss
 	 * @return String
 	 * @throws Exception 
 	 */
@@ -247,9 +247,9 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨¸ñÊ½Ö¸¶¨Ê±¼äµÄÈÕÀú
-	 * @param date Ê±¼ä 
-	 * @param format ¸ñÊ½
+	 * è·å–æŒ‡å®šæ ¼å¼æŒ‡å®šæ—¶é—´çš„æ—¥å†
+	 * @param date æ—¶é—´ 
+	 * @param format æ ¼å¼
 	 * @return Calendar
 	 */
 	public static Calendar getCalendar(Date date,String format){
@@ -264,7 +264,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ×Ö·û´®×ª»»ÎªÈÕÆÚ£¬ÈÕÆÚ¸ñÊ½Îª
+	 * å­—ç¬¦ä¸²è½¬æ¢ä¸ºæ—¥æœŸï¼Œæ—¥æœŸæ ¼å¼ä¸º
 	 *
 	 * @param value
 	 * @return
@@ -287,9 +287,9 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ½«×Ö·û´®(¸ñÊ½·ûºÏ¹æ·¶)×ª»»³ÉDate
-	 * @param value ĞèÒª×ª»»µÄ×Ö·û´®
-	 * @param format ÈÕÆÚ¸ñÊ½ 
+	 * å°†å­—ç¬¦ä¸²(æ ¼å¼ç¬¦åˆè§„èŒƒ)è½¬æ¢æˆDate
+	 * @param value éœ€è¦è½¬æ¢çš„å­—ç¬¦ä¸²
+	 * @param format æ—¥æœŸæ ¼å¼ 
 	 * @return Date
 	 */
 	public static Date string2Date(String value,String format){
@@ -310,10 +310,10 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ½«ÈÕÆÚ¸ñÊ½×ª»»³ÉString
+	 * å°†æ—¥æœŸæ ¼å¼è½¬æ¢æˆString
 	 * 
-	 * @param value ĞèÒª×ª»»µÄÈÕÆÚ
-	 * @param format ÈÕÆÚ¸ñÊ½
+	 * @param value éœ€è¦è½¬æ¢çš„æ—¥æœŸ
+	 * @param format æ—¥æœŸæ ¼å¼
 	 * @return String
 	 */
 	public static String date2String(Date value,String format){
@@ -326,7 +326,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * ÈÕÆÚ×ª»»Îª×Ö·û´®
+	 * æ—¥æœŸè½¬æ¢ä¸ºå­—ç¬¦ä¸²
 	 *
 	 *
 	 * @param value
@@ -342,8 +342,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÄê·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å¹´ä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentYear(Date value){
@@ -352,8 +352,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÄê·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å¹´ä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentYear(String value) {
@@ -363,8 +363,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÔÂ·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„æœˆä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentMonth(Date value){
@@ -373,8 +373,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÔÂ·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„æœˆä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentMonth(String value) {
@@ -385,8 +385,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÌì·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å¤©ä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentDay(Date value){
@@ -395,8 +395,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄÌì·İ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å¤©ä»½
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentDay(String value){
@@ -407,8 +407,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡µ±Ç°ÈÕÆÚÎªĞÇÆÚ¼¸
-	 * @param value ÈÕÆÚ
+	 * è·å–å½“å‰æ—¥æœŸä¸ºæ˜ŸæœŸå‡ 
+	 * @param value æ—¥æœŸ
 	 * @return String
 	 */
 	public static String getCurrentWeek(Date value) {
@@ -419,8 +419,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡µ±Ç°ÈÕÆÚÎªĞÇÆÚ¼¸
-	 * @param value ÈÕÆÚ
+	 * è·å–å½“å‰æ—¥æœŸä¸ºæ˜ŸæœŸå‡ 
+	 * @param value æ—¥æœŸ
 	 * @return String
 	 */
 	public static String getCurrentWeek(String value) {
@@ -429,8 +429,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄĞ¡Ê±
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å°æ—¶
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentHour(Date value){
@@ -439,8 +439,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄĞ¡Ê±
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„å°æ—¶
+	 * @param value æ—¥æœŸ
 	 * @return
 	 * @return int
 	 */
@@ -452,8 +452,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄ·ÖÖÓ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„åˆ†é’Ÿ
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentMinute(Date value){
@@ -462,8 +462,8 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡Ö¸¶¨ÈÕÆÚµÄ·ÖÖÓ
-	 * @param value ÈÕÆÚ
+	 * è·å–æŒ‡å®šæ—¥æœŸçš„åˆ†é’Ÿ
+	 * @param value æ—¥æœŸ
 	 * @return int
 	 */
 	public static int getCurrentMinute(String value){
@@ -474,15 +474,15 @@ public class DateUtils {
 	}
 	
 	/**  
-	 * ±È½ÏÁ½¸öÈÕÆÚÏà¸ô¶àÉÙÌì(ÔÂ¡¢Äê) <br>
-	 * Àı£º<br>
-	 * &nbsp;compareDate("2009-09-12", null, 0);//±È½ÏÌì <br>
-     * &nbsp;compareDate("2009-09-12", null, 1);//±È½ÏÔÂ <br> 
-     * &nbsp;compareDate("2009-09-12", null, 2);//±È½ÏÄê <br>
+	 * æ¯”è¾ƒä¸¤ä¸ªæ—¥æœŸç›¸éš”å¤šå°‘å¤©(æœˆã€å¹´) <br>
+	 * ä¾‹ï¼š<br>
+	 * &nbsp;compareDate("2009-09-12", null, 0);//æ¯”è¾ƒå¤© <br>
+     * &nbsp;compareDate("2009-09-12", null, 1);//æ¯”è¾ƒæœˆ <br> 
+     * &nbsp;compareDate("2009-09-12", null, 2);//æ¯”è¾ƒå¹´ <br>
      * 
-     * @param startDay ĞèÒª±È½ÏµÄÊ±¼ä ²»ÄÜÎª¿Õ(null),ĞèÒªÕıÈ·µÄÈÕÆÚ¸ñÊ½ ,Èç£º2009-09-12   
-     * @param endDay ±»±È½ÏµÄÊ±¼ä  Îª¿Õ(null)ÔòÎªµ±Ç°Ê±¼ä    
-     * @param stype ·µ»ØÖµÀàĞÍ   0Îª¶àÉÙÌì£¬1Îª¶àÉÙ¸öÔÂ£¬2Îª¶àÉÙÄê    
+     * @param startDay éœ€è¦æ¯”è¾ƒçš„æ—¶é—´ ä¸èƒ½ä¸ºç©º(null),éœ€è¦æ­£ç¡®çš„æ—¥æœŸæ ¼å¼ ,å¦‚ï¼š2009-09-12   
+     * @param endDay è¢«æ¯”è¾ƒçš„æ—¶é—´  ä¸ºç©º(null)åˆ™ä¸ºå½“å‰æ—¶é—´    
+     * @param stype è¿”å›å€¼ç±»å‹   0ä¸ºå¤šå°‘å¤©ï¼Œ1ä¸ºå¤šå°‘ä¸ªæœˆï¼Œ2ä¸ºå¤šå°‘å¹´    
      * @return int
      */    
     public static int compareDate(String startDay,String endDay,int stype) {     
@@ -508,13 +508,13 @@ public class DateUtils {
         } catch (Exception e) {    
         	e.printStackTrace();
         }     
-        while (!c1.after(c2)) {                   // Ñ­»·¶Ô±È£¬Ö±µ½ÏàµÈ£¬n ¾ÍÊÇËùÒªµÄ½á¹û     
+        while (!c1.after(c2)) {                   // å¾ªç¯å¯¹æ¯”ï¼Œç›´åˆ°ç›¸ç­‰ï¼Œn å°±æ˜¯æ‰€è¦çš„ç»“æœ     
             n++;     
             if(stype==1){     
-                c1.add(Calendar.MONTH, 1);          // ±È½ÏÔÂ·İ£¬ÔÂ·İ+1     
+                c1.add(Calendar.MONTH, 1);          // æ¯”è¾ƒæœˆä»½ï¼Œæœˆä»½+1     
             }     
             else{     
-                c1.add(Calendar.DATE, 1);           // ±È½ÏÌìÊı£¬ÈÕÆÚ+1     
+                c1.add(Calendar.DATE, 1);           // æ¯”è¾ƒå¤©æ•°ï¼Œæ—¥æœŸ+1     
             }     
         }     
         n = n-1;     
@@ -525,14 +525,14 @@ public class DateUtils {
     }   
     
     /**
-     * ±È½ÏÁ½¸öÊ±¼äÏà²î¶àÉÙĞ¡Ê±(·ÖÖÓ¡¢Ãë)
-     * @param startTime ĞèÒª±È½ÏµÄÊ±¼ä ²»ÄÜÎª¿Õ£¬ÇÒ±ØĞë·ûºÏÕıÈ·¸ñÊ½£º2012-12-12 12:12:
-     * @param endTime ĞèÒª±»±È½ÏµÄÊ±¼ä ÈôÎª¿ÕÔòÄ¬ÈÏµ±Ç°Ê±¼ä
-     * @param type 1£ºĞ¡Ê±   2£º·ÖÖÓ   3£ºÃë
+     * æ¯”è¾ƒä¸¤ä¸ªæ—¶é—´ç›¸å·®å¤šå°‘å°æ—¶(åˆ†é’Ÿã€ç§’)
+     * @param startTime éœ€è¦æ¯”è¾ƒçš„æ—¶é—´ ä¸èƒ½ä¸ºç©ºï¼Œä¸”å¿…é¡»ç¬¦åˆæ­£ç¡®æ ¼å¼ï¼š2012-12-12 12:12:
+     * @param endTime éœ€è¦è¢«æ¯”è¾ƒçš„æ—¶é—´ è‹¥ä¸ºç©ºåˆ™é»˜è®¤å½“å‰æ—¶é—´
+     * @param type 1ï¼šå°æ—¶   2ï¼šåˆ†é’Ÿ   3ï¼šç§’
      * @return int
      */
     public static int compareTime(String startTime , String endTime , int type) {
-    	//endTimeÊÇ·ñÎª¿Õ£¬Îª¿ÕÄ¬ÈÏµ±Ç°Ê±¼ä
+    	//endTimeæ˜¯å¦ä¸ºç©ºï¼Œä¸ºç©ºé»˜è®¤å½“å‰æ—¶é—´
     	if(endTime == null || "".equals(endTime)){
     		endTime = getCurrentTime();
     	}
@@ -542,8 +542,8 @@ public class DateUtils {
     	try {
 			Date begin = sdf.parse(startTime);
 			Date end = sdf.parse(endTime);
-			long between = (end.getTime() - begin.getTime()) / 1000;  //³ıÒÔ1000×ª»»³ÉºÀÃë
-			if(type == 1){   //Ğ¡Ê±
+			long between = (end.getTime() - begin.getTime()) / 1000;  //é™¤ä»¥1000è½¬æ¢æˆè±ªç§’
+			if(type == 1){   //å°æ—¶
 				value = (int) (between % (24 * 36000) / 3600);
 			}
 			else if(type == 2){
@@ -559,14 +559,14 @@ public class DateUtils {
     }
     
     /**
-     * ±È½ÏÁ½¸öÈÕÆÚµÄ´óĞ¡¡£<br>
-     * Èôdate1 > date2 Ôò·µ»Ø 1<br>
-     * Èôdate1 = date2 Ôò·µ»Ø 0<br>
-     * Èôdate1 < date2 Ôò·µ»Ø-1
+     * æ¯”è¾ƒä¸¤ä¸ªæ—¥æœŸçš„å¤§å°ã€‚<br>
+     * è‹¥date1 > date2 åˆ™è¿”å› 1<br>
+     * è‹¥date1 = date2 åˆ™è¿”å› 0<br>
+     * è‹¥date1 < date2 åˆ™è¿”å›-1
      * @param date1  
      * @param date2
-     * @param format  ´ı×ª»»µÄ¸ñÊ½
-     * @return ±È½Ï½á¹û
+     * @param format  å¾…è½¬æ¢çš„æ ¼å¼
+     * @return æ¯”è¾ƒç»“æœ
      */
     public static int compare(String date1, String date2,String format) {
         DateFormat df = DateFormatUtils.getFormat(format);
@@ -587,7 +587,7 @@ public class DateUtils {
     }
     
     /**
-     * »ñÈ¡Ö¸¶¨ÔÂ·İµÄµÚÒ»Ìì 
+     * è·å–æŒ‡å®šæœˆä»½çš„ç¬¬ä¸€å¤© 
      *
      * @param date
      * @return
@@ -598,7 +598,7 @@ public class DateUtils {
     }
     
     /**
-     * »ñÈ¡Ö¸¶¨ÔÂ·İµÄ×îºóÒ»Ìì
+     * è·å–æŒ‡å®šæœˆä»½çš„æœ€åä¸€å¤©
      *
      * @param strdate
      * @return
@@ -613,7 +613,7 @@ public class DateUtils {
 	}
 	
 	/**
-	 * »ñÈ¡ËùÔÚĞÇÆÚµÄµÚÒ»Ìì
+	 * è·å–æ‰€åœ¨æ˜ŸæœŸçš„ç¬¬ä¸€å¤©
 	 * 
 	 *
 	 * @param date
@@ -624,13 +624,13 @@ public class DateUtils {
 		Calendar now = Calendar.getInstance();
 		now.setTime(date);
 		int today = now.get(Calendar.DAY_OF_WEEK);
-		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // ĞÇÆÚÒ»
+		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // æ˜ŸæœŸä¸€
 		now.set(now.DATE, first_day_of_week);
 		return now.getTime();
 	}
 	
 	/**
-	 * »ñÈ¡ËùÔÚĞÇÆÚµÄ×îºóÒ»Ìì
+	 * è·å–æ‰€åœ¨æ˜ŸæœŸçš„æœ€åä¸€å¤©
 	 *
 	 *
 	 * @param date
@@ -641,8 +641,8 @@ public class DateUtils {
 		Calendar now = Calendar.getInstance();
 		now.setTime(date);
 		int today = now.get(Calendar.DAY_OF_WEEK);
-		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // ĞÇÆÚÒ»
-		int last_day_of_week = first_day_of_week + 6; // ĞÇÆÚÈÕ
+		int first_day_of_week = now.get(Calendar.DATE) + 2 - today; // æ˜ŸæœŸä¸€
+		int last_day_of_week = first_day_of_week + 6; // æ˜ŸæœŸæ—¥
 		now.set(now.DATE, last_day_of_week);
 		return now.getTime();
 	}

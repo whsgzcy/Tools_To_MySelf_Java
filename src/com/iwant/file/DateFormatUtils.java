@@ -6,22 +6,22 @@ import java.util.Date;
 
 public class DateFormatUtils {
 	
-	/** yyyy:Äê */
+	/** yyyy:å¹´ */
 	public static final String DATE_YEAR = "yyyy";
 	
-	/** MM£ºÔÂ */
+	/** MMï¼šæœˆ */
 	public static final String DATE_MONTH = "MM";
 	
-	/** DD£ºÈÕ */
+	/** DDï¼šæ—¥ */
 	public static final String DATE_DAY = "dd";
 	
-	/** HH£ºÊ± */
+	/** HHï¼šæ—¶ */
 	public static final String DATE_HOUR = "HH";
 	
-	/** mm£º·Ö */
+	/** mmï¼šåˆ† */
 	public static final String DATE_MINUTE = "mm";
 	
-	/** ss£ºÃë */
+	/** ssï¼šç§’ */
 	public static final String DATE_SECONDES = "ss";
 	
 	/** yyyy-MM-dd */
@@ -41,31 +41,31 @@ public class DateFormatUtils {
 	
 	/**
 	 * 
-	 * ¸ñÊ½×ª»»<br>
-	 * yyyy-MM-dd hh:mm:ss ºÍ yyyyMMddhhmmss Ïà»¥×ª»»<br>
-	 * yyyy-mm-dd ºÍyyyymmss Ïà»¥×ª»»
+	 * æ ¼å¼è½¬æ¢<br>
+	 * yyyy-MM-dd hh:mm:ss å’Œ yyyyMMddhhmmss ç›¸äº’è½¬æ¢<br>
+	 * yyyy-mm-dd å’Œyyyymmss ç›¸äº’è½¬æ¢
 	 * @param value 
-	 * 				ÈÕÆÚ
+	 * 				æ—¥æœŸ
 	 * @return String
 	 */
 	public static String formatString(String value) {
 		String sReturn = "";
 		if (value == null || "".equals(value))
 			return sReturn;
-		if (value.length() == 14) {   //³¤¶ÈÎª14¸ñÊ½×ª»»³Éyyyy-mm-dd hh:mm:ss
+		if (value.length() == 14) {   //é•¿åº¦ä¸º14æ ¼å¼è½¬æ¢æˆyyyy-mm-dd hh:mm:ss
 			sReturn = value.substring(0, 4) + "-" + value.substring(4, 6) + "-" + value.substring(6, 8) + " "
 					+ value.substring(8, 10) + ":" + value.substring(10, 12) + ":" + value.substring(12, 14);
 			return sReturn;
 		}
-		if (value.length() == 19) {   //³¤¶ÈÎª19¸ñÊ½×ª»»³Éyyyymmddhhmmss
+		if (value.length() == 19) {   //é•¿åº¦ä¸º19æ ¼å¼è½¬æ¢æˆyyyymmddhhmmss
 			sReturn = value.substring(0, 4) + value.substring(5, 7) + value.substring(8, 10) + value.substring(11, 13)
 					+ value.substring(14, 16) + value.substring(17, 19);
 			return sReturn;
 		}
-		if(value.length() == 10){     //³¤¶ÈÎª10¸ñÊ½×ª»»³Éyyyymmhh
+		if(value.length() == 10){     //é•¿åº¦ä¸º10æ ¼å¼è½¬æ¢æˆyyyymmhh
 			sReturn = value.substring(0, 4) + value.substring(5,7) + value.substring(8,10);
 		}
-		if(value.length() == 8){      //³¤¶ÈÎª8¸ñÊ½×ª»¯³Éyyyy-mm-dd
+		if(value.length() == 8){      //é•¿åº¦ä¸º8æ ¼å¼è½¬åŒ–æˆyyyy-mm-dd
 			sReturn = value.substring(0, 4) + "-" + value.substring(4, 6) + "-" + value.substring(6, 8);
 		}
 		return sReturn;
@@ -115,7 +115,7 @@ public class DateFormatUtils {
 			if ((dt = inFmt.parse(date, pos)) == null)
 				return date;
 			if ((format == null) || ("".equals(format.trim()))) {
-				outFmt = new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ");
+				outFmt = new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥");
 			} else {
 				outFmt = new SimpleDateFormat(format);
 			}
@@ -126,7 +126,7 @@ public class DateFormatUtils {
 	}
 
 	/**
-	 * ¸ñÊ½»¯ÈÕÆÚ
+	 * æ ¼å¼åŒ–æ—¥æœŸ
 	 * @param date
 	 * @param format
 	 * @return
@@ -136,7 +136,7 @@ public class DateFormatUtils {
 	}
 	
 	/**
-	 * @desc:¸ñÊ½»¯ÊÇÊ±¼ä£¬²ÉÓÃÄ¬ÈÏ¸ñÊ½£¨yyyy-MM-dd HH:mm:ss£©
+	 * @desc:æ ¼å¼åŒ–æ˜¯æ—¶é—´ï¼Œé‡‡ç”¨é»˜è®¤æ ¼å¼ï¼ˆyyyy-MM-dd HH:mm:ssï¼‰
 	 *
 	 * @param value
 	 * @return
@@ -146,7 +146,7 @@ public class DateFormatUtils {
 	}
 	
 	/**
-	 * ¸ñÊ½»¯ÈÕÆÚ
+	 * æ ¼å¼åŒ–æ—¥æœŸ
 	 *
 	 * @param value
 	 * @return
@@ -156,7 +156,7 @@ public class DateFormatUtils {
 	}
 	
 	/**
-	 * »ñÈ¡ÈÕÆÚÏÔÊ¾¸ñÊ½£¬Îª¿ÕÄ¬ÈÏÎªyyyy-mm-dd HH:mm:ss
+	 * è·å–æ—¥æœŸæ˜¾ç¤ºæ ¼å¼ï¼Œä¸ºç©ºé»˜è®¤ä¸ºyyyy-mm-dd HH:mm:ss
 	 * @param format
 	 * @return
 	 * @return SimpleDateFormat

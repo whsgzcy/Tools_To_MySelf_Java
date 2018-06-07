@@ -15,43 +15,43 @@ public class FileUtils {
 	private static final char EXTENSION_SEPARATOR = '.';
 
 	/**
-	 * @desc:ÅĞ¶ÏÖ¸¶¨Â·¾¶ÊÇ·ñ´æÔÚ£¬Èç¹û²»´æÔÚ£¬¸ù¾İ²ÎÊı¾ö¶¨ÊÇ·ñĞÂ½¨ Ö¸¶¨µÄÎÄ¼şÂ·¾¶
+	 * @desc:åˆ¤æ–­æŒ‡å®šè·¯å¾„æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨ï¼Œæ ¹æ®å‚æ•°å†³å®šæ˜¯å¦æ–°å»º æŒ‡å®šçš„æ–‡ä»¶è·¯å¾„
 	 * @param isNew
-	 *            true£ºĞÂ½¨¡¢false£º²»ĞÂ½¨
-	 * @return ´æÔÚ·µ»ØTRUE£¬²»´æÔÚ·µ»ØFALSE
+	 *            trueï¼šæ–°å»ºã€falseï¼šä¸æ–°å»º
+	 * @return å­˜åœ¨è¿”å›TRUEï¼Œä¸å­˜åœ¨è¿”å›FALSE
 	 */
 	public static boolean isExist(String filePath, boolean isNew) {
 		File file = new File(filePath);
 		if (!file.exists() && isNew) {
-			return file.mkdirs(); // ĞÂ½¨ÎÄ¼şÂ·¾¶
+			return file.mkdirs(); // æ–°å»ºæ–‡ä»¶è·¯å¾„
 		}
 		return false;
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬¹¹½¨½á¹¹Îª prefix + yyyyMMddHH24mmss + 10Î»Ëæ»úÊı + suffix + .type
+	 * è·å–æ–‡ä»¶åï¼Œæ„å»ºç»“æ„ä¸º prefix + yyyyMMddHH24mmss + 10ä½éšæœºæ•° + suffix + .type
 	 * 
 	 * @param type
-	 *            ÎÄ¼şÀàĞÍ
+	 *            æ–‡ä»¶ç±»å‹
 	 * @param prefix
-	 *            Ç°×º
+	 *            å‰ç¼€
 	 * @param suffix
-	 *            ºó×º
+	 *            åç¼€
 	 * @return
 	 */
 	public static String getFileName(String type, String prefix, String suffix) {
-		String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss"); // µ±Ç°Ê±¼ä
-		String random = RandomUtils.generateNumberString(10); // 10Î»Ëæ»úÊı
+		String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss"); // å½“å‰æ—¶é—´
+		String random = RandomUtils.generateNumberString(10); // 10ä½éšæœºæ•°
 
-		// ·µ»ØÎÄ¼şÃû
+		// è¿”å›æ–‡ä»¶å
 		return prefix + date + random + suffix + "." + type;
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬ÎÄ¼şÃû¹¹³É:µ±Ç°Ê±¼ä + 10Î»Ëæ»úÊı + .type
+	 * è·å–æ–‡ä»¶åï¼Œæ–‡ä»¶åæ„æˆ:å½“å‰æ—¶é—´ + 10ä½éšæœºæ•° + .type
 	 *
 	 * @param type
-	 *            ÎÄ¼şÀàĞÍ
+	 *            æ–‡ä»¶ç±»å‹
 	 * @return
 	 */
 	public static String getFileName(String type) {
@@ -59,20 +59,20 @@ public class FileUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şÃû£¬ÎÄ¼ş¹¹³É£ºµ±Ç°Ê±¼ä + 10Î»Ëæ»úÊı
+	 * è·å–æ–‡ä»¶åï¼Œæ–‡ä»¶æ„æˆï¼šå½“å‰æ—¶é—´ + 10ä½éšæœºæ•°
 	 *
 	 * @return
 	 */
 	public static String getFileName() {
-		String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss"); // µ±Ç°Ê±¼ä
-		String random = RandomUtils.generateNumberString(10); // 10Î»Ëæ»úÊı
+		String date = DateUtils.getCurrentTime("yyyyMMddHH24mmss"); // å½“å‰æ—¶é—´
+		String random = RandomUtils.generateNumberString(10); // 10ä½éšæœºæ•°
 
-		// ·µ»ØÎÄ¼şÃû
+		// è¿”å›æ–‡ä»¶å
 		return date + random;
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨ÎÄ¼şµÄ´óĞ¡
+	 * è·å–æŒ‡å®šæ–‡ä»¶çš„å¤§å°
 	 *
 	 * @param file
 	 * @return
@@ -92,7 +92,7 @@ public class FileUtils {
 	}
 
 	/**
-	 * É¾³ıËùÓĞÎÄ¼ş£¬°üÀ¨ÎÄ¼ş¼Ğ
+	 * åˆ é™¤æ‰€æœ‰æ–‡ä»¶ï¼ŒåŒ…æ‹¬æ–‡ä»¶å¤¹
 	 *
 	 * @param dirpath
 	 */
@@ -100,13 +100,13 @@ public class FileUtils {
 		File path = new File(dirpath);
 		try {
 			if (!path.exists())
-				return;// Ä¿Â¼²»´æÔÚÍË³ö
-			if (path.isFile()) // Èç¹ûÊÇÎÄ¼şÉ¾³ı
+				return;// ç›®å½•ä¸å­˜åœ¨é€€å‡º
+			if (path.isFile()) // å¦‚æœæ˜¯æ–‡ä»¶åˆ é™¤
 			{
 				path.delete();
 				return;
 			}
-			File[] files = path.listFiles();// Èç¹ûÄ¿Â¼ÖĞÓĞÎÄ¼şµİ¹éÉ¾³ıÎÄ¼ş
+			File[] files = path.listFiles();// å¦‚æœç›®å½•ä¸­æœ‰æ–‡ä»¶é€’å½’åˆ é™¤æ–‡ä»¶
 			for (int i = 0; i < files.length; i++) {
 				deleteAll(files[i].getAbsolutePath());
 			}
@@ -118,42 +118,42 @@ public class FileUtils {
 	}
 
 	/**
-	 * ¸´ÖÆÎÄ¼ş»òÕßÎÄ¼ş¼Ğ
+	 * å¤åˆ¶æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
 	 * 
 	 * @param inputFile
-	 *            Ô´ÎÄ¼ş
+	 *            æºæ–‡ä»¶
 	 * @param outputFile
-	 *            Ä¿µÄÎÄ¼ş
+	 *            ç›®çš„æ–‡ä»¶
 	 * @param isOverWrite
-	 *            ÊÇ·ñ¸²¸ÇÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–æ–‡ä»¶
 	 * @throws java.io.IOException
 	 */
 	public static void copy(File inputFile, File outputFile, boolean isOverWrite) throws IOException {
 		if (!inputFile.exists()) {
-			throw new RuntimeException(inputFile.getPath() + "Ô´Ä¿Â¼²»´æÔÚ!");
+			throw new RuntimeException(inputFile.getPath() + "æºç›®å½•ä¸å­˜åœ¨!");
 		}
 		copyPri(inputFile, outputFile, isOverWrite);
 	}
 
 	/**
-	 * ¸´ÖÆÎÄ¼ş»òÕßÎÄ¼ş¼Ğ
+	 * å¤åˆ¶æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
 	 *
 	 * @param inputFile
-	 *            Ô´ÎÄ¼ş
+	 *            æºæ–‡ä»¶
 	 * @param outputFile
-	 *            Ä¿µÄÎÄ¼ş
+	 *            ç›®çš„æ–‡ä»¶
 	 * @param isOverWrite
-	 *            ÊÇ·ñ¸²¸ÇÎÄ¼ş
+	 *            æ˜¯å¦è¦†ç›–æ–‡ä»¶
 	 * @throws java.io.IOException
 	 */
 	private static void copyPri(File inputFile, File outputFile, boolean isOverWrite) throws IOException {
-		if (inputFile.isFile()) { // ÎÄ¼ş
+		if (inputFile.isFile()) { // æ–‡ä»¶
 			copySimpleFile(inputFile, outputFile, isOverWrite);
 		} else {
-			if (!outputFile.exists()) { // ÎÄ¼ş¼Ğ
+			if (!outputFile.exists()) { // æ–‡ä»¶å¤¹
 				outputFile.mkdirs();
 			}
-			// Ñ­»·×ÓÎÄ¼ş¼Ğ
+			// å¾ªç¯å­æ–‡ä»¶å¤¹
 			for (File child : inputFile.listFiles()) {
 				copy(child, new File(outputFile.getPath() + "/" + child.getName()), isOverWrite);
 			}
@@ -161,24 +161,24 @@ public class FileUtils {
 	}
 
 	/**
-	 * ¸´ÖÆµ¥¸öÎÄ¼ş
+	 * å¤åˆ¶å•ä¸ªæ–‡ä»¶
 	 *
 	 * @param inputFile
-	 *            Ô´ÎÄ¼ş
+	 *            æºæ–‡ä»¶
 	 * @param outputFile
-	 *            Ä¿µÄÎÄ¼ş
+	 *            ç›®çš„æ–‡ä»¶
 	 * @param isOverWrite
-	 *            ÊÇ·ñ¸²¸Ç
+	 *            æ˜¯å¦è¦†ç›–
 	 * @throws java.io.IOException
 	 */
 	private static void copySimpleFile(File inputFile, File outputFile, boolean isOverWrite) throws IOException {
 		if (outputFile.exists()) {
-			if (isOverWrite) { // ¿ÉÒÔ¸²¸Ç
+			if (isOverWrite) { // å¯ä»¥è¦†ç›–
 				if (!outputFile.delete()) {
-					throw new RuntimeException(outputFile.getPath() + "ÎŞ·¨¸²¸Ç£¡");
+					throw new RuntimeException(outputFile.getPath() + "æ— æ³•è¦†ç›–ï¼");
 				}
 			} else {
-				// ²»ÔÊĞí¸²¸Ç
+				// ä¸å…è®¸è¦†ç›–
 				return;
 			}
 		}
@@ -194,11 +194,11 @@ public class FileUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şµÄMD5
+	 * è·å–æ–‡ä»¶çš„MD5
 	 * 
 	 *
 	 * @param file
-	 *            ÎÄ¼ş
+	 *            æ–‡ä»¶
 	 * @return
 	 */
 	public static String getFileMD5(File file) {
@@ -225,10 +225,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÎÄ¼şµÄºó×º
+	 * è·å–æ–‡ä»¶çš„åç¼€
 	 * 
 	 * @param file
-	 *            ÎÄ¼ş
+	 *            æ–‡ä»¶
 	 * @return
 	 */
 	public static String getFileSuffix(String file) {
@@ -247,18 +247,18 @@ public class FileUtils {
 	}
 
 	/**
-	 * ÎÄ¼şÖØÃüÃû
+	 * æ–‡ä»¶é‡å‘½å
 	 * 
 	 * @param oldPath
-	 *            ÀÏÎÄ¼ş
+	 *            è€æ–‡ä»¶
 	 * @param newPath
-	 *            ĞÂÎÄ¼ş
+	 *            æ–°æ–‡ä»¶
 	 */
 	public boolean renameDir(String oldPath, String newPath) {
-		File oldFile = new File(oldPath);// ÎÄ¼ş»òÄ¿Â¼
-		File newFile = new File(newPath);// ÎÄ¼ş»òÄ¿Â¼
+		File oldFile = new File(oldPath);// æ–‡ä»¶æˆ–ç›®å½•
+		File newFile = new File(newPath);// æ–‡ä»¶æˆ–ç›®å½•
 
-		return oldFile.renameTo(newFile);// ÖØÃüÃû
+		return oldFile.renameTo(newFile);// é‡å‘½å
 	}
 
 }
