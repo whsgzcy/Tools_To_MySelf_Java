@@ -14,7 +14,7 @@ public class String2Handle {
 		// String str1 = "0512-87772520;0512-87772620";
 		// String str1 = "18561242573;13771832367";
 
-		// æ‹¦æˆªä¸€ä¸ªå·ç 
+		// À¹½ØÒ»¸öºÅÂë
 		if (!str1.contains(";")) {
 			if (str1.contains("-")) {
 				list.add(str1);
@@ -107,7 +107,7 @@ public class String2Handle {
 //
 //		// String str1 = "18561242573;13771832367";
 //
-//		// æ‹¦æˆªä¸€ä¸ªå·ç 
+//		// À¹½ØÒ»¸öºÅÂë
 //		if (!str1.contains(";")) {
 //			if (str1.contains("-")) {
 //				list.add(str1);
@@ -186,7 +186,7 @@ public class String2Handle {
 		// List<String> list3 = new ArrayList<String>();
 		//
 		// for (int m = 0; m < 4; m++) {
-		// // åº§æœº
+		// // ×ù»ú
 		// if (list.get(m).contains("-")) {
 		// list2.add(list.get(m));
 		// continue;
@@ -194,7 +194,7 @@ public class String2Handle {
 		// }
 		//
 		// for (int m = 0; m < 4; m++) {
-		// // åº§æœº
+		// // ×ù»ú
 		// if (!list.get(m).contains("-")) {
 		// if (!list.get(m).equals("")) {
 		// list2.add(list.get(m));

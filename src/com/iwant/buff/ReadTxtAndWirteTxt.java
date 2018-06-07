@@ -11,22 +11,22 @@ public class ReadTxtAndWirteTxt {
 
 	public static void main(String[] args) {
 
-		try { // é˜²æ­¢æ–‡ä»¶å»ºç«‹æˆ–è¯»å–å¤±è´¥ï¼Œç”¨catchæ•æ‰é”™è¯¯å¹¶æ‰“å°ï¼Œä¹Ÿå¯ä»¥throw
-			/* è¯»å…¥TXTæ–‡ä»¶ */
-			String pathname = "/Users/super_yu/Desktop/t.txt"; // ç»å¯¹è·¯å¾„æˆ–ç›¸å¯¹è·¯å¾„éƒ½å¯ä»¥ï¼Œè¿™é‡Œæ˜¯ç»å¯¹è·¯å¾„ï¼Œå†™å…¥æ–‡ä»¶æ—¶æ¼”ç¤ºç›¸å¯¹è·¯å¾„
-			File filename = new File(pathname); // è¦è¯»å–ä»¥ä¸Šè·¯å¾„çš„inputã€‚txtæ–‡ä»¶
-			InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // å»ºç«‹ä¸€ä¸ªè¾“å…¥æµå¯¹è±¡reader
-			BufferedReader br = new BufferedReader(reader); // å»ºç«‹ä¸€ä¸ªå¯¹è±¡ï¼Œå®ƒæŠŠæ–‡ä»¶å†…å®¹è½¬æˆè®¡ç®—æœºèƒ½è¯»æ‡‚çš„è¯­è¨€
+		try { // ·ÀÖ¹ÎÄ¼ş½¨Á¢»ò¶ÁÈ¡Ê§°Ü£¬ÓÃcatch²¶×½´íÎó²¢´òÓ¡£¬Ò²¿ÉÒÔthrow
+			/* ¶ÁÈëTXTÎÄ¼ş */
+			String pathname = "/Users/super_yu/Desktop/t.txt"; // ¾ø¶ÔÂ·¾¶»òÏà¶ÔÂ·¾¶¶¼¿ÉÒÔ£¬ÕâÀïÊÇ¾ø¶ÔÂ·¾¶£¬Ğ´ÈëÎÄ¼şÊ±ÑİÊ¾Ïà¶ÔÂ·¾¶
+			File filename = new File(pathname); // Òª¶ÁÈ¡ÒÔÉÏÂ·¾¶µÄinput¡£txtÎÄ¼ş
+			InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // ½¨Á¢Ò»¸öÊäÈëÁ÷¶ÔÏóreader
+			BufferedReader br = new BufferedReader(reader); // ½¨Á¢Ò»¸ö¶ÔÏó£¬Ëü°ÑÎÄ¼şÄÚÈİ×ª³É¼ÆËã»úÄÜ¶Á¶®µÄÓïÑÔ
 			String line = "";
 			// line = br.readLine();
 			StringBuffer b = new StringBuffer();
 			while (line != null) {
-				line = br.readLine(); // ä¸€æ¬¡è¯»å…¥ä¸€è¡Œæ•°æ®
+				line = br.readLine(); // Ò»´Î¶ÁÈëÒ»ĞĞÊı¾İ
 				System.out.println(line);
 				if (line != null) {
 					b.append(line);
 					// line = line.substring(47, line.length());
-					// out.write(line + "\r\n"); // \r\nå³ä¸ºæ¢è¡Œ
+					// out.write(line + "\r\n"); // \r\n¼´Îª»»ĞĞ
 				}
 			}
 			
@@ -49,35 +49,35 @@ public class ReadTxtAndWirteTxt {
 		// System.out.println(t.length());
 		// System.out.println(t.substring(45,t.length()));
 
-		// try { // é˜²æ­¢æ–‡ä»¶å»ºç«‹æˆ–è¯»å–å¤±è´¥ï¼Œç”¨catchæ•æ‰é”™è¯¯å¹¶æ‰“å°ï¼Œä¹Ÿå¯ä»¥throw
+		// try { // ·ÀÖ¹ÎÄ¼ş½¨Á¢»ò¶ÁÈ¡Ê§°Ü£¬ÓÃcatch²¶×½´íÎó²¢´òÓ¡£¬Ò²¿ÉÒÔthrow
 		//
-		// /* å†™å…¥Txtæ–‡ä»¶ */
+		// /* Ğ´ÈëTxtÎÄ¼ş */
 		// File writename = new File("/Users/super_yu/Desktop/tt.txt"); //
-		// ç›¸å¯¹è·¯å¾„ï¼Œå¦‚æœæ²¡æœ‰åˆ™è¦å»ºç«‹ä¸€ä¸ªæ–°çš„outputã€‚txtæ–‡ä»¶
-		// writename.createNewFile(); // åˆ›å»ºæ–°æ–‡ä»¶
+		// Ïà¶ÔÂ·¾¶£¬Èç¹ûÃ»ÓĞÔòÒª½¨Á¢Ò»¸öĞÂµÄoutput¡£txtÎÄ¼ş
+		// writename.createNewFile(); // ´´½¨ĞÂÎÄ¼ş
 		// BufferedWriter out = new BufferedWriter(new FileWriter(writename));
 		//
-		// /* è¯»å…¥TXTæ–‡ä»¶ */
+		// /* ¶ÁÈëTXTÎÄ¼ş */
 		// String pathname = "/Users/super_yu/Desktop/a.txt"; //
-		// ç»å¯¹è·¯å¾„æˆ–ç›¸å¯¹è·¯å¾„éƒ½å¯ä»¥ï¼Œè¿™é‡Œæ˜¯ç»å¯¹è·¯å¾„ï¼Œå†™å…¥æ–‡ä»¶æ—¶æ¼”ç¤ºç›¸å¯¹è·¯å¾„
-		// File filename = new File(pathname); // è¦è¯»å–ä»¥ä¸Šè·¯å¾„çš„inputã€‚txtæ–‡ä»¶
+		// ¾ø¶ÔÂ·¾¶»òÏà¶ÔÂ·¾¶¶¼¿ÉÒÔ£¬ÕâÀïÊÇ¾ø¶ÔÂ·¾¶£¬Ğ´ÈëÎÄ¼şÊ±ÑİÊ¾Ïà¶ÔÂ·¾¶
+		// File filename = new File(pathname); // Òª¶ÁÈ¡ÒÔÉÏÂ·¾¶µÄinput¡£txtÎÄ¼ş
 		// InputStreamReader reader = new InputStreamReader(new
-		// FileInputStream(filename)); // å»ºç«‹ä¸€ä¸ªè¾“å…¥æµå¯¹è±¡reader
+		// FileInputStream(filename)); // ½¨Á¢Ò»¸öÊäÈëÁ÷¶ÔÏóreader
 		// BufferedReader br = new BufferedReader(reader); //
-		// å»ºç«‹ä¸€ä¸ªå¯¹è±¡ï¼Œå®ƒæŠŠæ–‡ä»¶å†…å®¹è½¬æˆè®¡ç®—æœºèƒ½è¯»æ‡‚çš„è¯­è¨€
+		// ½¨Á¢Ò»¸ö¶ÔÏó£¬Ëü°ÑÎÄ¼şÄÚÈİ×ª³É¼ÆËã»úÄÜ¶Á¶®µÄÓïÑÔ
 		// String line = "";
 		// // line = br.readLine();
 		// while (line != null) {
-		// line = br.readLine(); // ä¸€æ¬¡è¯»å…¥ä¸€è¡Œæ•°æ®
+		// line = br.readLine(); // Ò»´Î¶ÁÈëÒ»ĞĞÊı¾İ
 		// System.out.println(line);
 		// if (line != null) {
 		// line = line.substring(47, line.length());
-		// out.write(line + "\r\n"); // \r\nå³ä¸ºæ¢è¡Œ
+		// out.write(line + "\r\n"); // \r\n¼´Îª»»ĞĞ
 		// }
 		// }
 		//
-		// out.flush(); // æŠŠç¼“å­˜åŒºå†…å®¹å‹å…¥æ–‡ä»¶
-		// out.close(); // æœ€åè®°å¾—å…³é—­æ–‡ä»¶
+		// out.flush(); // °Ñ»º´æÇøÄÚÈİÑ¹ÈëÎÄ¼ş
+		// out.close(); // ×îºó¼ÇµÃ¹Ø±ÕÎÄ¼ş
 		//
 		// } catch (Exception e) {
 		// e.printStackTrace();

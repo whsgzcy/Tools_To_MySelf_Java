@@ -8,7 +8,7 @@ import com.iwant.vjson.JsonValidator;
 public class HandleStringManager {
 
 	/**
-	 * æ ¹æ®æ‰§è¡Œå­—ç¬¦ String å­—ç¬¦ä¸²å¤„ç†
+	 * ¸ù¾İÖ´ĞĞ×Ö·û String ×Ö·û´®´¦Àí
 	 * 
 	 * @param message
 	 * @return
@@ -35,13 +35,13 @@ public class HandleStringManager {
 	}
 
 	/**
-	 * é¦–ä½åˆ å» <å¼€å§‹>ç»“æŸ
+	 * Ê×Î»É¾È¥ <¿ªÊ¼>½áÊø
 	 * 
 	 * @param sEventString
 	 * @return
 	 */
 	public static String serverMessage(String sEventString) {
-		// åŠ å…¥å¼€å§‹ä¸ç»“æŸçš„æ ‡å¿—
+		// ¼ÓÈë¿ªÊ¼Óë½áÊøµÄ±êÖ¾
 		int end = sEventString.length() - 1;
 		String content = sEventString.substring(1, end);
 		content = "<" + content + ">";
@@ -50,14 +50,14 @@ public class HandleStringManager {
 	}
 
 	/**
-	 * å¤„ç†æ¥è‡ªserverçš„æ¶ˆæ¯
+	 * ´¦ÀíÀ´×ÔserverµÄÏûÏ¢
 	 * 
 	 * @param message
 	 * @return
 	 */
 	public static List<String> handleMessageFromServer(String message) {
 		List<String> contents = new ArrayList<String>();
-		// å»é™¤æ‰€æœ‰ç©ºæ ¼
+		// È¥³ıËùÓĞ¿Õ¸ñ
 		message = message.replace(" ", "");
 		String content_1 = message.replace(">", "*");
 
@@ -90,7 +90,7 @@ public class HandleStringManager {
 
 	public static List<String> testHandleMessaeFromClient(String message) {
 		List<String> contents = new ArrayList<String>();
-		// 1ã€å»é™¤æ‰€æœ‰ç©ºæ ¼
+		// 1¡¢È¥³ıËùÓĞ¿Õ¸ñ
 		message = message.replace(" ", "");
 
 		String content_1 = message.replace(">", "*");

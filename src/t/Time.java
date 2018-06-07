@@ -8,8 +8,8 @@ public class Time {
 
 	// SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	// String time= sdf.format( new Date());
-	// è¿™ä¸ªå­—ç¬¦ä¸² timeå·²ç»æˆä¸ºä½ è¦çš„æ ¼å¼äº†
-	// å­—ç¬¦ä¸²å˜date
+	// Õâ¸ö×Ö·û´® timeÒÑ¾­³ÉÎªÄãÒªµÄ¸ñÊ½ÁË
+	// ×Ö·û´®±ädate
 	// Date date=sdf.parse(time);
 	
 	public static void main(String[] args) {

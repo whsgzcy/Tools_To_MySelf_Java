@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		// ç»„ç»‡å¥½ byteä¸šåŠ¡é€»è¾‘
+		// ×éÖ¯ºÃ byteÒµÎñÂß¼­
 		byte[] b = new byte[30];
 		b[0] = 60;
 		b[29] = 62;
@@ -34,7 +34,7 @@ public class Test {
 		System.out.println("pp = " + pp);
 		System.out.println("xxxx = " + xxxx);
 
-		// å–å‡º double çš„ byte[]
+		// È¡³ö double µÄ byte[]
 
 		for (int i = 0; i < b.length; i++) {
 			System.out.print(b[i] + " ");
@@ -42,17 +42,17 @@ public class Test {
 
 		System.out.println();
 
-		// å†™æˆ 16è¿›åˆ¶å­—ç¬¦ä¸²
+		// Ğ´³É 16½øÖÆ×Ö·û´®
 		String hexStr = bytesToHexFun1(b);
 		System.out.println(hexStr);
 		System.out.println(hexStr.length());
-		// 16è¿›åˆ¶é‡æ–°è½¬æ¢ä¸º byte
+		// 16½øÖÆÖØĞÂ×ª»»Îª byte
 		byte[] strs = toBytes(hexStr);
 		for (int i = 0; i < strs.length; i++) {
 			System.out.print(strs[i] + " ");
 		}
 
-		// ç‰¹æ®Šå­—ç¬¦
+		// ÌØÊâ×Ö·û
 		String start = "<";
 		byte[] start_byte = start.getBytes();
 
@@ -60,7 +60,7 @@ public class Test {
 		System.out.println(" * " + start_byte[0]);
 		System.out.println(" * " + start_byte.length);
 
-		// éªŒè¯
+		// ÑéÖ¤
 		// 60 60 15 20 20 0 0 0 0 0 0 -16 63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62 62
 		// 0x3C 0x3C 15 11 11 0.06 0.123 0.123 0x3E 0x3E
 		byte[] s = { 60, 60, 15, 20, 20, 0, 0, 0, 0, 0, 0, -16, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62,62 };
@@ -70,11 +70,11 @@ public class Test {
 		System.out.println(bytes2Double(nav_p));
 		System.out.println(bytes2Double(nav_x));
 		
-		 // å®éªŒ
+		 // ÊµÑé
 	    // byte[] one int + long + string
 	    // byte[] two int + long + string
 	    // byte[] three one + two
-	    // three ä¸€ä¸ªä¸€ä¸ªè½¬æ¢ hexString
+	    // three Ò»¸öÒ»¸ö×ª»» hexString
 	    
 	    byte[] three = new byte[17];
 	    three[0] = 60;
@@ -152,7 +152,7 @@ public class Test {
 	}
 
 	/**
-	 * æ–¹æ³•ä¸€ï¼š byte[] to hex string
+	 * ·½·¨Ò»£º byte[] to hex string
 	 * 
 	 * @param bytes
 	 * @return
@@ -161,11 +161,11 @@ public class Test {
 			'f' };
 
 	public static String bytesToHexFun1(byte[] bytes) {
-		// ä¸€ä¸ªbyteä¸º8ä½ï¼Œå¯ç”¨ä¸¤ä¸ªåå…­è¿›åˆ¶ä½æ ‡è¯†
+		// Ò»¸öbyteÎª8Î»£¬¿ÉÓÃÁ½¸öÊ®Áù½øÖÆÎ»±êÊ¶
 		char[] buf = new char[bytes.length * 2];
 		int a = 0;
 		int index = 0;
-		for (byte b : bytes) { // ä½¿ç”¨é™¤ä¸å–ä½™è¿›è¡Œè½¬æ¢
+		for (byte b : bytes) { // Ê¹ÓÃ³ıÓëÈ¡Óà½øĞĞ×ª»»
 			if (b < 0) {
 				a = 256 + b;
 			} else {
@@ -179,7 +179,7 @@ public class Test {
 	}
 
 	/**
-	 * æ–¹æ³•äºŒï¼š byte[] to hex string
+	 * ·½·¨¶ş£º byte[] to hex string
 	 * 
 	 * @param bytes
 	 * @return
@@ -187,7 +187,7 @@ public class Test {
 	public static String bytesToHexFun2(byte[] bytes) {
 		char[] buf = new char[bytes.length * 2];
 		int index = 0;
-		for (byte b : bytes) { // åˆ©ç”¨ä½è¿ç®—è¿›è¡Œè½¬æ¢ï¼Œå¯ä»¥çœ‹ä½œæ–¹æ³•ä¸€çš„å˜ç§
+		for (byte b : bytes) { // ÀûÓÃÎ»ÔËËã½øĞĞ×ª»»£¬¿ÉÒÔ¿´×÷·½·¨Ò»µÄ±äÖÖ
 			buf[index++] = HEX_CHAR[b >>> 4 & 0xf];
 			buf[index++] = HEX_CHAR[b & 0xf];
 		}
@@ -196,14 +196,14 @@ public class Test {
 	}
 
 	/**
-	 * æ–¹æ³•ä¸‰ï¼š byte[] to hex string
+	 * ·½·¨Èı£º byte[] to hex string
 	 * 
 	 * @param bytes
 	 * @return
 	 */
 	public static String bytesToHexFun3(byte[] bytes) {
 		StringBuilder buf = new StringBuilder(bytes.length * 2);
-		for (byte b : bytes) { // ä½¿ç”¨Stringçš„formatæ–¹æ³•è¿›è¡Œè½¬æ¢
+		for (byte b : bytes) { // Ê¹ÓÃStringµÄformat·½·¨½øĞĞ×ª»»
 			buf.append(String.format("%02x", new Integer(b & 0xff)));
 		}
 
@@ -211,7 +211,7 @@ public class Test {
 	}
 
 	/**
-	 * å°†16è¿›åˆ¶å­—ç¬¦ä¸²è½¬æ¢ä¸ºbyte[]
+	 * ½«16½øÖÆ×Ö·û´®×ª»»Îªbyte[]
 	 * 
 	 * @param str
 	 * @return

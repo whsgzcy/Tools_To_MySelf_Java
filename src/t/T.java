@@ -65,7 +65,7 @@ public class T {
 	}
 	
 	/**
-     * æ’é™¤ è‹¥ move_base/status 3
+     * ÅÅ³ı Èô move_base/status 3
      * @param reached
      * @param naving
      */

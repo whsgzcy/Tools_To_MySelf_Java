@@ -4,21 +4,21 @@ public class THex {
 	
 	public static void main(String[] args) {
 		
-		int a = 0x2f;//å°å†™åå…­è¿›åˆ¶ï¼ˆç­‰ä»·äº0x002fï¼‰  
+		int a = 0x2f;//Ğ¡Ğ´Ê®Áù½øÖÆ£¨µÈ¼ÛÓÚ0x002f£©  
 	    System.out.println(Integer.toBinaryString(a));
 	      
-	    int b = 0x2F;//å¤§å†™åå…­è¿›åˆ¶  
+	    int b = 0x2F;//´óĞ´Ê®Áù½øÖÆ  
 	    System.out.println(Integer.toBinaryString(b));
 	      
-	    int c = 10;//æ ‡å‡†åè¿›åˆ¶  
+	    int c = 10;//±ê×¼Ê®½øÖÆ  
 	    System.out.println(Integer.toBinaryString(c));
 	      
-	    int d = 010;//ä»¥é›¶å¼€å¤´ï¼Œè¡¨ç¤ºå…«è¿›åˆ¶  
+	    int d = 010;//ÒÔÁã¿ªÍ·£¬±íÊ¾°Ë½øÖÆ  
 	    System.out.println(Integer.toBinaryString(d));
 	      
-	    char e = 0xff;//charä¸º2ä¸ªå­—èŠ‚ï¼Œ16ä½  
-	    byte f = 0xf;//byteä¸º8ä½  
-	    short g = 0xff;//shortä¸º2ä¸ªå­—èŠ‚ï¼Œ16ä½  
+	    char e = 0xff;//charÎª2¸ö×Ö½Ú£¬16Î»  
+	    byte f = 0xf;//byteÎª8Î»  
+	    short g = 0xff;//shortÎª2¸ö×Ö½Ú£¬16Î»  
 	    System.out.println(Integer.toBinaryString(e));
 	    System.out.println(Integer.toBinaryString(f)); 
 	    System.out.println(Integer.toBinaryString(g));
@@ -44,7 +44,7 @@ public class THex {
 	
 	
 	/**
-     * æ–¹æ³•ä¸€ï¼š
+     * ·½·¨Ò»£º
      * byte[] to hex string
      * 
      * @param bytes
@@ -53,11 +53,11 @@ public class THex {
 	private static final char[] HEX_CHAR = {'0', '1', '2', '3', '4', '5', 
             '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
     public static String bytesToHexFun1(byte[] bytes) {
-        // ä¸€ä¸ªbyteä¸º8ä½ï¼Œå¯ç”¨ä¸¤ä¸ªåå…­è¿›åˆ¶ä½æ ‡è¯†
+        // Ò»¸öbyteÎª8Î»£¬¿ÉÓÃÁ½¸öÊ®Áù½øÖÆÎ»±êÊ¶
         char[] buf = new char[bytes.length * 2];
         int a = 0;
         int index = 0;
-        for(byte b : bytes) { // ä½¿ç”¨é™¤ä¸å–ä½™è¿›è¡Œè½¬æ¢
+        for(byte b : bytes) { // Ê¹ÓÃ³ıÓëÈ¡Óà½øĞĞ×ª»»
             if(b < 0) {
                 a = 256 + b;
             } else {
@@ -71,7 +71,7 @@ public class THex {
     }
     
     /**
-     * æ–¹æ³•äºŒï¼š
+     * ·½·¨¶ş£º
      * byte[] to hex string
      * 
      * @param bytes
@@ -80,7 +80,7 @@ public class THex {
     public static String bytesToHexFun2(byte[] bytes) {
         char[] buf = new char[bytes.length * 2];
         int index = 0;
-        for(byte b : bytes) { // åˆ©ç”¨ä½è¿ç®—è¿›è¡Œè½¬æ¢ï¼Œå¯ä»¥çœ‹ä½œæ–¹æ³•ä¸€çš„å˜ç§
+        for(byte b : bytes) { // ÀûÓÃÎ»ÔËËã½øĞĞ×ª»»£¬¿ÉÒÔ¿´×÷·½·¨Ò»µÄ±äÖÖ
             buf[index++] = HEX_CHAR[b >>> 4 & 0xf];
             buf[index++] = HEX_CHAR[b & 0xf];
         }

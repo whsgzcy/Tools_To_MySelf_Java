@@ -13,10 +13,10 @@ public class JsonValidator {
     }
 
     /**
-     * éªŒè¯ä¸€ä¸ªå­—ç¬¦ä¸²æ˜¯å¦æ˜¯åˆæ³•çš„JSONä¸²
+     * ÑéÖ¤Ò»¸ö×Ö·û´®ÊÇ·ñÊÇºÏ·¨µÄJSON´®
      * 
-     * @param input è¦éªŒè¯çš„å­—ç¬¦ä¸²
-     * @return true-åˆæ³• ï¼Œfalse-éæ³•
+     * @param input ÒªÑéÖ¤µÄ×Ö·û´®
+     * @return true-ºÏ·¨ £¬false-·Ç·¨
      */
     public boolean validate(String input) {
         input = input.trim();

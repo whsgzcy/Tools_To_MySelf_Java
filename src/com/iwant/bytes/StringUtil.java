@@ -6,9 +6,9 @@ import org.apache.commons.codec.binary.Hex;
 public class StringUtil {
 	
 	 /** 
-     * å­—èŠ‚æ•°ç»„è½¬æ¢æˆ16è¿›åˆ¶å­—ç¬¦ä¸² 
-     * @param bytes å­—èŠ‚æ•°ç»„ 
-     * @return 16è¿›åˆ¶å­—ç¬¦ä¸² 
+     * ×Ö½ÚÊı×é×ª»»³É16½øÖÆ×Ö·û´® 
+     * @param bytes ×Ö½ÚÊı×é 
+     * @return 16½øÖÆ×Ö·û´® 
      */  
     public static String hexEncode(byte[] bytes) {  
         if (bytes == null || bytes.length <= 0) {  
@@ -18,9 +18,9 @@ public class StringUtil {
     }  
   
     /** 
-     * 16è¿›åˆ¶å­—ç¬¦ä¸²è½¬æ¢æˆå­—èŠ‚æ•°ç»„ 
-     * @param hexStr 16è¿›åˆ¶å­—ç¬¦ä¸² 
-     * @return å­—èŠ‚æ•°ç»„ 
+     * 16½øÖÆ×Ö·û´®×ª»»³É×Ö½ÚÊı×é 
+     * @param hexStr 16½øÖÆ×Ö·û´® 
+     * @return ×Ö½ÚÊı×é 
      */  
     public static byte[] hexDecode(String hexStr) {  
         if (hexStr == null || "".equals(hexStr)) {  
@@ -36,44 +36,44 @@ public class StringUtil {
     }  
       
     /** 
-     * å­—èŠ‚æ•°ç»„è½¬ä¸º16è¿›åˆ¶å­—ç¬¦ä¸² 
-     * @param bytes å­—èŠ‚æ•°ç»„ 
-     * @return 16è¿›åˆ¶å­—ç¬¦ä¸² 
+     * ×Ö½ÚÊı×é×ªÎª16½øÖÆ×Ö·û´® 
+     * @param bytes ×Ö½ÚÊı×é 
+     * @return 16½øÖÆ×Ö·û´® 
      */  
     public static String byteArray2HexString(byte[] bytes) {  
         if (bytes == null || bytes.length <= 0) {  
             return null;  
         }  
-        //å…ˆæŠŠbyte[] è½¬æ¢ç»´char[]ï¼Œå†æŠŠchar[]è½¬æ¢ä¸ºå­—ç¬¦ä¸²  
-        char[] chars = new char[bytes.length * 2]; // æ¯ä¸ªbyteå¯¹åº”ä¸¤ä¸ªå­—ç¬¦  
+        //ÏÈ°Ñbyte[] ×ª»»Î¬char[]£¬ÔÙ°Ñchar[]×ª»»Îª×Ö·û´®  
+        char[] chars = new char[bytes.length * 2]; // Ã¿¸öbyte¶ÔÓ¦Á½¸ö×Ö·û  
         final char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };  
         for (int i = 0, j = 0; i < bytes.length; i++) {  
-            chars[j++] = hexDigits[bytes[i] >> 4 & 0x0f]; // å…ˆå­˜byteçš„é«˜4ä½  
-            chars[j++] = hexDigits[bytes[i] & 0x0f]; // å†å­˜byteçš„ä½4ä½  
+            chars[j++] = hexDigits[bytes[i] >> 4 & 0x0f]; // ÏÈ´æbyteµÄ¸ß4Î»  
+            chars[j++] = hexDigits[bytes[i] & 0x0f]; // ÔÙ´æbyteµÄµÍ4Î»  
         }  
   
         return new String(chars);  
     }  
   
     /** 
-     * 16è¿›åˆ¶å­—ç¬¦ä¸²è½¬å­—èŠ‚æ•°ç»„ 
-     * @param hexString 16è¿›åˆ¶å­—ç¬¦ä¸² 
-     * @return å­—èŠ‚æ•°ç»„ 
+     * 16½øÖÆ×Ö·û´®×ª×Ö½ÚÊı×é 
+     * @param hexString 16½øÖÆ×Ö·û´® 
+     * @return ×Ö½ÚÊı×é 
      */  
     public static byte[] hexString2ByteArray(String hexString) {  
         if (hexString == null || "".equals(hexString)) {  
             return null;  
         }  
-        //å…ˆæŠŠå­—ç¬¦ä¸²è½¬æ¢ä¸ºchar[]ï¼Œå†è½¬æ¢ä¸ºbyte[]  
+        //ÏÈ°Ñ×Ö·û´®×ª»»Îªchar[]£¬ÔÙ×ª»»Îªbyte[]  
         int length = hexString.length() / 2;  
         char[] hexChars = hexString.toCharArray();  
         byte[] bytes = new byte[length];  
         String hexDigits = "0123456789abcdef";  
         for (int i = 0; i < length; i++) {  
-            int pos = i * 2; // ä¸¤ä¸ªå­—ç¬¦å¯¹åº”ä¸€ä¸ªbyte  
-            int h = hexDigits.indexOf(hexChars[pos]) << 4; // æ³¨1  
-            int l = hexDigits.indexOf(hexChars[pos + 1]); // æ³¨2  
-            if (h == -1 || l == -1) { // é16è¿›åˆ¶å­—ç¬¦  
+            int pos = i * 2; // Á½¸ö×Ö·û¶ÔÓ¦Ò»¸öbyte  
+            int h = hexDigits.indexOf(hexChars[pos]) << 4; // ×¢1  
+            int l = hexDigits.indexOf(hexChars[pos + 1]); // ×¢2  
+            if (h == -1 || l == -1) { // ·Ç16½øÖÆ×Ö·û  
                 return null;  
             }  
             bytes[i] = (byte) (h | l);  
@@ -95,16 +95,16 @@ public class StringUtil {
              //result = byteArray2HexString(str.getBytes()); //27  
              result = hexEncode(str.getBytes());    //32  
          }  
-         System.out.println("è€—æ—¶ï¼š"+(System.currentTimeMillis()-b));  
+         System.out.println("ºÄÊ±£º"+(System.currentTimeMillis()-b));  
            
-         System.out.println("resultï¼š"+result);  
+         System.out.println("result£º"+result);  
          long b2 = System.currentTimeMillis();  
          for(int i=0; i<10000; i++){  
              //bytes = hexString2ByteArray(result); //32  
              bytes = hexDecode(result); //16  
          }  
-         System.out.println("è€—æ—¶ï¼š"+(System.currentTimeMillis()-b2));  
-         System.out.println("resultï¼š"+new String(bytes));  
+         System.out.println("ºÄÊ±£º"+(System.currentTimeMillis()-b2));  
+         System.out.println("result£º"+new String(bytes));  
     }  
 
 }

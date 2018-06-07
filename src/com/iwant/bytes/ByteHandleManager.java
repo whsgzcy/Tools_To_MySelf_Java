@@ -37,20 +37,20 @@ public class ByteHandleManager {
 
 		System.out.println(q[0]);
 
-		int aa = 0x55aa;// å°å†™åå…­è¿›åˆ¶ï¼ˆç­‰ä»·äº0x002fï¼‰
+		int aa = 0x55aa;// Ğ¡Ğ´Ê®Áù½øÖÆ£¨µÈ¼ÛÓÚ0x002f£©
 		System.out.println(Integer.toBinaryString(aa));
 
-		int bb = 0x55AA;// å¤§å†™åå…­è¿›åˆ¶
+		int bb = 0x55AA;// ´óĞ´Ê®Áù½øÖÆ
 		System.out.println(Integer.toBinaryString(bb));
 		
 	}
 
-	// 16è¿›åˆ¶å­—ç¬¦ä¸²è½¬æ¢ä¸ºbyte[]
+	// 16½øÖÆ×Ö·û´®×ª»»Îªbyte[]
 	public static byte[] HexToByte(String hexString) {
 		int len = hexString.length();
 		byte[] b = new byte[len / 2];
 		for (int i = 0; i < len; i += 2) {
-			// ä¸¤ä½ä¸€ç»„ï¼Œè¡¨ç¤ºä¸€ä¸ªå­—èŠ‚,æŠŠè¿™æ ·è¡¨ç¤ºçš„16è¿›åˆ¶å­—ç¬¦ä¸²ï¼Œè¿˜åŸæˆä¸€ä¸ªå­—èŠ‚
+			// Á½Î»Ò»×é£¬±íÊ¾Ò»¸ö×Ö½Ú,°ÑÕâÑù±íÊ¾µÄ16½øÖÆ×Ö·û´®£¬»¹Ô­³ÉÒ»¸ö×Ö½Ú
 			b[i / 2] = (byte) ((Character.digit(hexString.charAt(i), 16) << 4)
 					+ Character.digit(hexString.charAt(i + 1), 16));
 		}
