@@ -61,52 +61,54 @@ public class Test {
 		System.out.println(" * " + start_byte.length);
 
 		// 验证
-		// 60 60 15 20 20 0 0 0 0 0 0 -16 63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62 62
+		// 60 60 15 20 20 0 0 0 0 0 0 -16 63 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62
+		// 62
 		// 0x3C 0x3C 15 11 11 0.06 0.123 0.123 0x3E 0x3E
-		byte[] s = { 60, 60, 15, 20, 20, 0, 0, 0, 0, 0, 0, -16, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62,62 };
-		byte[] nav_p = {0, 0, 0, 0, 0, 0, -16, 63};
-		byte[] nav_x = {0, 0, 0, 0, 0, 0, 0, 0};
+		byte[] s = { 60, 60, 15, 20, 20, 0, 0, 0, 0, 0, 0, -16, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62,
+				62 };
+		byte[] nav_p = { 0, 0, 0, 0, 0, 0, -16, 63 };
+		byte[] nav_x = { 0, 0, 0, 0, 0, 0, 0, 0 };
 		byte[] nav_y = {};
 		System.out.println(bytes2Double(nav_p));
 		System.out.println(bytes2Double(nav_x));
-		
-		 // 实验
-	    // byte[] one int + long + string
-	    // byte[] two int + long + string
-	    // byte[] three one + two
-	    // three 一个一个转换 hexString
-	    
-	    byte[] three = new byte[17];
-	    three[0] = 60;
-	    three[1] = 60;
-	    
-	    three[15] = 62;
-	    three[16] = 62;
-	    
-	    three[2] = 12;
-	    
-	    three[3] = 4;
-	    three[4] = 5;
-	    three[5] = 6;
-	    three[6] = 7;
-	    
-	    byte[] one = double2Bytes(0.68);
-	    
+
+		// 实验
+		// byte[] one int + long + string
+		// byte[] two int + long + string
+		// byte[] three one + two
+		// three 一个一个转换 hexString
+
+		byte[] three = new byte[17];
+		three[0] = 60;
+		three[1] = 60;
+
+		three[15] = 62;
+		three[16] = 62;
+
+		three[2] = 12;
+
+		three[3] = 4;
+		three[4] = 5;
+		three[5] = 6;
+		three[6] = 7;
+
+		byte[] one = double2Bytes(0.68);
+
 		System.arraycopy(one, 0, three, 7, 8);
-		
+
 		System.out.println(bytesToHexFun1(three));
-		
-		for(int i = 0; i < three.length; i++){
+
+		for (int i = 0; i < three.length; i++) {
 			byte[] two = new byte[1];
 			two[0] = three[i];
 			System.out.print(bytesToHexFun1(two));
 		}
-		
+
 		System.out.println();
-		
+
 		byte[] one1 = new byte[1];
 		one1[0] = three[0];
-		
+
 		byte[] one2 = new byte[9];
 		one2[0] = three[1];
 		one2[1] = three[2];
@@ -117,7 +119,7 @@ public class Test {
 		one2[6] = three[7];
 		one2[7] = three[8];
 		one2[8] = three[9];
-		
+
 		byte[] one3 = new byte[7];
 		one3[0] = three[10];
 		one3[1] = three[11];
@@ -126,20 +128,29 @@ public class Test {
 		one3[4] = three[14];
 		one3[5] = three[15];
 		one3[6] = three[16];
-		
+
 		System.out.print(bytesToHexFun1(one1));
 		System.out.print(bytesToHexFun1(one2));
 		System.out.print(bytesToHexFun1(one3));
-				
+
 		System.out.println();
 		byte[] four = toBytes("aa0004ffbb");
-		
-		for(int i = 0; i < four.length; i++){
+
+		for (int i = 0; i < four.length; i++) {
 			System.out.print(four[i] + " ");
 		}
-		
+
 		System.out.println(bytesToHexFun2(four));
-	    
+
+		//85 -86 15 23 21 0 0 0 0 0 0 -16 63 84 85 -116 -111 -128 26 -10 -65 12 -84 121 -53 -5 80 -5 -65 0 2 1 2 32 85 -69 
+		//85 -86 15 23 21 0 0 0 0 0 0 -16 63 -74 -43 -117 -111 -128 26 -10 -65 98 106 121 -53 -5 80 -5 -65 2 1 2 32 0 85 -69
+		//85 -86 15 23 21 0 0 0 0 0 0 -16 63 42 -73 -59 8 93 2 -10 -65 -39 52 -81 37 16 111 -5 -65 2 1 8 2 32 85 -69
+		byte[] five = toBytes("55aa0f1715000000000000f03f2ab7c5085d02f6bfd934af25106ffbbf020108022055bb");
+
+		for (int i = 0; i < five.length; i++) {
+			System.out.print(five[i] + " ");
+		}
+
 	}
 
 	public static byte[] double2Bytes(double d) {
