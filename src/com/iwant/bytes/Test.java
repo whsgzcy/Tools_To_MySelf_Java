@@ -150,7 +150,14 @@ public class Test {
 		for (int i = 0; i < five.length; i++) {
 			System.out.print(five[i] + " ");
 		}
+		
+		System.out.println();
 
+		byte[] six = toBytes("55aa0f1715000000000000f03f54558c91801af6bf0cac79cbfb50fbbf000201022055bb");
+
+		for (int i = 0; i < six.length; i++) {
+			System.out.print(six[i] + " ");
+		}
 	}
 
 	public static byte[] double2Bytes(double d) {

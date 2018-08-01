@@ -24,6 +24,15 @@ public class TTT {
 
 		System.out.println(t2 == t3);
 		System.out.println(t2.equals(t3));
+		
+		String t = "001";
+		int t4 = Integer.parseInt("001");
+		System.out.println(t4);
+		
+		String t5 = "012345";
+		System.out.println(t5.substring(0, 2));
+		System.out.println(t5.substring(2, 4));
+		System.out.println(t5.substring(4, 6));
 	}
 
 }
