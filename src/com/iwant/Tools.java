@@ -61,8 +61,16 @@ public class Tools {
 
 		lc.addAll(ld);
 		
-		List<String> b = removeDuplicteUsers(lc);
-		System.out.println(b);
+		lc = removeDuplicteUsers(lc);
+		System.out.println(lc);
+				
+		int code1 = (Integer.parseInt("020000") / 100000) * 10 + Integer.parseInt("020000") % 100000 / 10000;
+		int code2 = (Integer.parseInt("020000") % 100000 % 10000 / 1000) * 10 + Integer.parseInt("020000") % 100000 % 10000 % 1000 / 100;
+		int code3 = (Integer.parseInt("020000") % 100000 % 10000 % 1000 % 100 / 10) * 10 + Integer.parseInt("020000") % 100000 % 10000 % 1000 % 100 % 10;
+		
+		System.out.println(code1);
+		System.out.println(code2);
+		System.out.println(code3);
 	}
 	
 	 public static List<String> removeDuplicteUsers(List<String> list) {
