@@ -71,7 +71,23 @@ public class Tools {
 		System.out.println(code1);
 		System.out.println(code2);
 		System.out.println(code3);
+		
+		// 判断是都为阿拉伯数字 语音转换 2 两 等
+		String test = "早上好，今天是个好日子124 dadasd";
+		for(int i = 0; i < test.length(); i++){
+			if(Character.isDigit(test.charAt(i))){
+				 String s = toChineseNum(Integer.parseInt(test.charAt(i) + ""));
+				 test = test.replace(test.charAt(i) + "", s);
+			}
+		}
+		System.out.println(test);
+		
 	}
+	
+	static String chineseNums[] = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
+    public static String toChineseNum(int num){
+        return chineseNums[num];
+    }
 	
 	 public static List<String> removeDuplicteUsers(List<String> list) {
 	        Set<String> s = new TreeSet<String>(new Comparator<String>() {
