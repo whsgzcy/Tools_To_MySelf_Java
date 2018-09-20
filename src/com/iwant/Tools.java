@@ -2,7 +2,9 @@ package com.iwant;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -81,6 +83,36 @@ public class Tools {
 			}
 		}
 		System.out.println(test);
+		
+		Map<String, String> m = new HashMap<>();
+		m.put("a", "aa");
+		m.put("b", "bb");
+		m.put("c", "cc");
+		m.put("d", "dd");
+
+		for(Map.Entry<String, String> entry:m.entrySet()){
+			System.out.println(entry.getValue());
+		}
+		
+		for(Map.Entry<String, String> entry:m.entrySet()){
+			String value = entry.getValue();
+			if(value.equals("aa") || value.equals("bb")){
+				continue;
+			}
+			System.out.println("value  -->  " + value);
+		}
+		
+		// 不能在遍历的过程中改变集合的长度
+		List<String> list = new ArrayList<>();
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add("d");
+		list.add("b");
+		
+		for(int i = 0; i < list.size(); i++){
+			System.out.println("list.get() = " + list.get(i));
+		}
 		
 	}
 	
