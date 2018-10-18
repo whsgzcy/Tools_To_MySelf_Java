@@ -18,9 +18,9 @@ public class T {
 		aa.setList(alist);
 		
 		B bb = new B();
-		List<A.AT> blist = new ArrayList<>();
+		List<B.BT> blist = new ArrayList<>();
 		for(int i = 0; i < 10; i++){
-			A.AT a = new A.AT();
+			B.BT a = new B.BT();
 			a.setAge(i + "");
 			a.setName(i + "");
 			blist.add(a);
@@ -33,7 +33,7 @@ public class T {
 		
 		A aaa = aa;
 		
-//		System.out.println(aa.getList().equals(aaa.getList()) + "");
+		System.out.println(aa.getList().equals(aaa.getList()) + "");
 		System.out.println(BeanStyleObjectComparator.compare(aa.getList(), aaa.getList()) + "");
 		
 		A aaaa = new A();
@@ -47,7 +47,7 @@ public class T {
 		aaaa.setList(aaaalist);
 		
 //		System.out.println(aaaa.getList().equals(aaa.getList()) + "");
-		System.out.println(BeanStyleObjectComparator.compare(aaaa.getList(),aaa.getList()) + "");
+//		System.out.println(BeanStyleObjectComparator.compare(aaaa.getList(),aaa.getList()) + "");
 
 	}
 }
